@@ -1,10 +1,28 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+
 function generatePassword () {
-  const generateBtn = prompt("You clicked the button!");
+  const generateBtn = prompt("How many characters would you like your password to contain?");
+  if (generateBtn < 8 || generateBtn > 128) {
+    alert("Please choose a password that is more than 8 characters but less than 128");
+  } else {
+    const lowerCase = confirm("Would you like to have a lowercase characters in your password?"); 
+    
+  }
+ 
 }
   
-  
+
+
+
+
+const upperCase = confirm("would you like to have uppercase characters in your password?");
+if (upperCase == true) {
+
+}
+
+//return "generatePassword will go here!"
+
 
 
 // 1. Prompt the user for the password criteria
@@ -15,7 +33,6 @@ function generatePassword () {
 
 
 
-
 // 4 .Display password to the page. 
 
 
@@ -23,8 +40,6 @@ function generatePassword () {
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
-  
 
   passwordText.value = password;
 
