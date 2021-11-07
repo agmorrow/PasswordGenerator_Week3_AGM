@@ -10,6 +10,7 @@ if (characterLength < 8 || characterLength > 128) {
 }
 //    b. Lowercase, uppercase, numeric, and/or special characters
   const lowerCase = confirm('Click OK if you would like lowercase characters in your password');
+  if (lowerCase === true)
   const upperCase = confirm('Click OK if you would like uppercase characters in your password');
   const numeric = confirm('Click OK if you would like numeric characters in your password');
   const specialCharacters = confirm('Click OK if you would like special characters in your password');
@@ -19,9 +20,6 @@ if (characterLength < 8 || characterLength > 128) {
 
   return "Generated password will go here!"
 }
-
-
-
 
 
 // Write password to the #password input
