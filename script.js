@@ -1,33 +1,44 @@
 // Assignment Code
 const generateBtn = document.querySelector("#generate");
-let characterLength, lowerCase, upperCase, numeric, specialCharacters
+// let characterType = {
+//   lowerCase = "abcdefghijklmnopqrstuvwxyv",
+//   upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+//   numeric = "0123456789",
+//   specialCharacters = " !# $%&'()*+,-./:;<=>?@>'",
+// };  
+
+// const getCharacters = [
+//   function lowerCase() {
+//     return characterType.lowerCase[Math.floor(Math.random() * characterType.lowerCase.characterLength)];
+//   },  
+//   function upperCase() {
+//     return characterType.upperCaseCase[Math.floor(Math.random() * characterType.upperCCase.characterLength)];
+//   },
+//   function numeric() {
+//     return characterType.numeric[Math.floor(Math.random() * characterType.numeric.characterLength)];
+//   },
+//   function specialCharacters() {
+//     return characterType.specialCharacters[Math.floor(Math.random() * characterType.specialCharacters.characterLength)];
+//   }
+// ];
+// console.log(getCharacters);
 
 
 function generatePassword() {
-  const passwordType = "";
-  if (lowerCase === true) {
-    passwordType = "abcdefghijklmnopqrstuvwxyv";
-  } else if (upperCase === true) {
-    passwordType = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  }
 
-  //   const retVal = "";
-  //   for (var i = 0; i < length; i++) {
-  //     retVal += generatePassword();
-  //   }
-  //   return retVal;
-}
+
+
+};
 
 // Write password to the #password input
 // Stores the value of generate Password into the Password variable
 function writePassword() {
   characterLength = window.prompt('Please enter the length you wish your password to be');
-  // if (characterLength < 8 || characterLength > 128) {
-  //   alert('Please enter a password length of at least 8 characters and no more than 128 characters');
-  // } else {
-
-  // }
-  console.log(characterLength);
+  if (characterLength < 8 || characterLength > 128) {
+    alert('Please enter a password length of at least 8 characters and no more than 128 characters');
+  
+  
+  }
   lowerCase = confirm('Click OK if you would like lowercase characters in your password');
   upperCase = confirm('Click OK if you would like uppercase characters in your password');
   numeric = confirm('Click OK if you would like numeric characters in your password');
@@ -37,8 +48,7 @@ function writePassword() {
 
   passwordText.value = password;
 
-
-}
+};
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
