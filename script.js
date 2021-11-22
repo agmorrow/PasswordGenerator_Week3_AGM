@@ -12,8 +12,8 @@ function generatePassword() {
   // 1. Prompt the user for the password criteria
   var passwordCriteria = "";
   //    a. password length between 8 && 128
-  var characterLength = prompt("Enter a number from 8 to 128 for password length.");
-  //    b. Lowercase, uppercase, numeric, and/or special characters
+  var characterLength = prompt("Enter a number between 8 and 128 for password length.");
+  //    b. lowercase, uppercase, numeric, and/or special characters
   var lowerCase = confirm("Click OK if you would you like to use lowercase letters?");
   if (lowerCase) {
     passwordCriteria += characterType.lowerCase;
